@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;HA(SER) EL TIEMPO SENSIBLE&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0A0AFF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Helvetica', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 64px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 3;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>white-space: pre-wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-right: 2px solid;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.word {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0A0AFF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease-in-out, left 3s linear, top 3s linear;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes float {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-10px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.word:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;HA(SER) EL TIEMPO SENSIBLE&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="message" id="message"&gt;&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const words = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"PRESENCIA": "Cierra los ojos y siente tu respiración",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"SILENCIO": "Percibe el ahora con todos los sentidos.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"INFINITO": "Comprende la vastedad de lo que somos.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"RITUAL": "Realiza un gesto consciente.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"CAMINAR": "Siente cada paso con lo sagrado del andar.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"QUIETUD": "sé, sin pensar.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"AHORA": "Habita desde los sentidos.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"GRATITUD": "Encuentra un espacio sagrado.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"RESPIRAR": "Exhala con gratitud, devolviendo luz y amor.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"CONSCIENCIA": "Abre el flujo del universo en ti",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"FLUIR": "suelta el control, muévete libre.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"SENTIR": "Percibe el ritmo de tu corazón.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"ESCUCHAR": "Enfócate en el sonido más lejano que puedas percibir.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"SER": "Siente la esencia infinita de tu ser.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"LUZ": "Observa cómo la luz llena el espacio"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function typeMessage(text) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const messageElement = document.getElementById("message");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>messageElement.textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let index = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function type() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (index &lt; text.length) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>messageElement.textContent += text.charAt(index);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>index++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(type, 50);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>type();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function moveWords() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll(".word").forEach(span =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let x = Math.random() * window.innerWidth * 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let y = Math.random() * window.innerHeight * 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.style.left = `${x}px`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.style.top = `${y}px`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function createFloatingWords() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Object.keys(words).forEach(word =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let span = document.createElement("span");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.textContent = word;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.classList.add("word");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.body.appendChild(span);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>let x = Math.random() * window.innerWidth * 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let y = Math.random() * window.innerHeight * 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.style.left = `${x}px`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.style.top = `${y}px`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.style.animation = "float 3s infinite ease-in-out";</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>span.addEventListener("click", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (words[word]) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>typeMessage(words[word]);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setInterval(moveWords, 4000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>createFloatingWords();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
